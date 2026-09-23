@@ -22,7 +22,7 @@ function ProductCard({key, name, price, image, description, onAddToCart}) {
                     <p className="description">{description}</p>
                     <p className="price">{formattedCurrency}</p>
                 </div>
-                <button className="add-cart-button" onClick= {() => onAddToCart(key)}> 
+                <button className="add-cart-button" onClick = {() => onAddToCart(key)}> 
                     Add to Cart
                 </button>
             </div>

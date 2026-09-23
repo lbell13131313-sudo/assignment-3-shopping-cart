@@ -31,12 +31,15 @@ function App() {
     }
   ];
 
-  // STILL NEEDS WORK
-  // uses the state from the products array
-  const cart = useState([products]);
+  const [cart, setAddCart] = useState([]);
 
   const addToCart = (key) => {
-    cart(products.filter());
+    //setAddCart([cart, (p => p.id == key)]);
+    //setAddCart([cart, products.filter(p => p.id !== key)]);
+    //setAddCart(cart.filter(p => p.id !== key));
+
+    // I was overcomplicating this so much, but now I have it so it properly adds the items to the cart
+    setAddCart([...cart, (p => p.id == key)])
   };
   
   return (
