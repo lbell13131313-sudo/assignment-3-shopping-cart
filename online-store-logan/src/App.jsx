@@ -3,9 +3,34 @@ import ProductCard from './components/ProductCard' // allows us to use the Produ
 import Header from './components/Header'
 import Hero from './components/Hero'
 import Footer from './components/Footer'
+import { useState } from 'react'
 
 // please note that my page is in dark mode
 function App() {
+  const products = [
+    { 
+      id: 1, 
+      name: "Xbox Series X|S Controller", 
+      price: 53.99, 
+      image: "https://placehold.co/300x200",
+      description: "Game controller usable for Xbox Series X|S, PC, and Phone"
+    },
+    { 
+      id: 2, 
+      name: "80 Minute CD-Rs", 
+      price: 7.99, 
+      image: "https://placehold.co/300x200",
+      description: "10 pack of writeable CD-R discs"
+    },
+    { 
+      id: 3, 
+      name: "Vinyl Player", 
+      price: 249.00, 
+      image: "https://placehold.co/300x200",
+      description: "Plays both fullsize vinyls and mini vinyls"
+    }
+  ];
+  
   return (
     <div className="app">
       <Header
@@ -22,26 +47,16 @@ function App() {
       {/* allows the product cards to be in a row centered on the screen */}
       <div className="product_row">
         {/* supplies the props to the ProductCard function in ProductCard.jsx */}
-        <ProductCard
-          name="Xbox Series X|S Controller"
-          description="Game controller usable for Xbox Series X|S, PC, and Phone"
-          price="$53.99"
-          image="https://placehold.co/300x200"
-        />
-
-        <ProductCard
-          name="80 Minute CD-Rs"
-          description="10 pack of writeable CD-R discs"
-          price="$7.99"
-          image="https://placehold.co/300x200"
-        />
-
-        <ProductCard
-          name="Vinyl Player"
-          description="Plays both fullsize vinyls and mini vinyls"
-          price="$249.00"
-          image="https://placehold.co/300x200"
-        />
+        {/* much more condensed and reusable now than it was before */}
+        {products.map(p => (
+          <ProductCard
+            key={p.id}
+            name={p.name}
+            price={p.price}
+            image={p.image}
+            description={p.description}
+          />
+        )) }
       </div>
 
       <Footer

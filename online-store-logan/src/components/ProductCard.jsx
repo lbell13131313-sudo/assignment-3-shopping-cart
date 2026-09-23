@@ -1,7 +1,14 @@
 import './ProductCard.css' // allows me to use my custom css styles
 
 // each card has the same format to help with a clean look
-function ProductCard({name, description, price, image}) {
+function ProductCard({name, price, image, description}) {
+    
+    // formats the price to USD format including 2 decimal places and the $ in front
+    const formattedCurrency = new Intl.NumberFormat('en-US', {
+        style: 'currency',
+        currency: 'USD',
+    }).format(price);
+
     return (
         <div className="product-card">
             <div className="product-header">
@@ -13,7 +20,7 @@ function ProductCard({name, description, price, image}) {
                 <div className="product-info">
                     <h3 className="name">{name}</h3>
                     <p className="description">{description}</p>
-                    <p className="price">{price}</p>
+                    <p className="price">{formattedCurrency}</p>
                 </div>
             </div>
         </div>
