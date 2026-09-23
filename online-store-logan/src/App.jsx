@@ -39,7 +39,7 @@ function App() {
     //setAddCart(cart.filter(p => p.id !== key));
 
     // I was overcomplicating this so much, but now I have it so it properly adds the items to the cart
-    setAddCart([...cart, (p => p.id == key)])
+    setAddCart([...cart, (p => p.id == key)]);
   };
   
   return (
