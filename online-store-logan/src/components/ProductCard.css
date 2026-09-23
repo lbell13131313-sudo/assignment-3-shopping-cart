@@ -8,5 +8,9 @@
 }
 
 .price {
-    color: green;
+  color: green;
+}
+
+.add-cart-button {
+  display: flex
 }

@@ -30,11 +30,19 @@ function App() {
       description: "Plays both fullsize vinyls and mini vinyls"
     }
   ];
+
+  // uses the state from the products array
+  const cart = useState([products]);
+
+  const addToCart = (key) => {
+    cart(products.filter());
+  };
   
   return (
     <div className="app">
       <Header
         store_name="Logan's Tech Shop"
+        length={cart.length}
       />
 
       {/* I had to change the link because my page is only 1124px wide for some reason I have no idea why */}
@@ -55,6 +63,7 @@ function App() {
             price={p.price}
             image={p.image}
             description={p.description}
+            onAddToCart={addToCart}
           />
         )) }
       </div>

@@ -2,9 +2,9 @@
     display: flex;
 }
 
-.store_name {
+.store-name {
     display: flex;
-    width: 50%;
+    width: 30%;
     height: 50px;
     background-color: #38264f;
     color: white;
@@ -13,7 +13,7 @@
     font-size: 25px;
 }
 
-.menu_buttons {
+.menu-buttons {
     display: flex;
     flex-direction: row;
     gap: 20px;
@@ -24,4 +24,17 @@
     justify-content: center;
     align-items: center;
     font-size: 15px;
+}
+
+.cart-container {
+    display: flex;
+    width: 20%;
+    height: 50px;
+    background-color: #38264f;
+    justify-content: center;
+    align-items: center;
+}
+
+.cart_icon {
+    display: flex
 }
