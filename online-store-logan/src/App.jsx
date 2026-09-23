@@ -40,6 +40,7 @@ function App() {
 
     // I was overcomplicating this so much, but now I have it so it properly adds the items to the cart
     setAddCart([...cart, (p => p.id == key)]);
+    console.log(cart);
   };
   
   return (
