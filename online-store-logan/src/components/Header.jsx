@@ -6,7 +6,7 @@ function Header({store_name, length}) {
             <div className="store-name">
                 {store_name}
             </div>
-            <div className="menu_buttons">
+            <div className="menu-buttons">
                 <div>Home</div>
                 <div>Products</div>
                 <div>About</div>
