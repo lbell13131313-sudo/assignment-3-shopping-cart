@@ -3,6 +3,7 @@ import ProductCard from './components/ProductCard' // allows us to use the Produ
 import Header from './components/Header'
 import Hero from './components/Hero'
 import Footer from './components/Footer'
+import CartItem from './components/CartItem'
 import { useState } from 'react'
 
 // please note that my page is in dark mode
@@ -40,7 +41,7 @@ function App() {
 
     // I was overcomplicating this so much, but now I have it so it properly adds the items to the cart
     setAddCart([...cart, (p => p.id == key)]);
-    console.log(cart);
+    //console.log(cart);
   };
   
   return (
