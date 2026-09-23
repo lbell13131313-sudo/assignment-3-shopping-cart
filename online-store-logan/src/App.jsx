@@ -31,6 +31,7 @@ function App() {
     }
   ];
 
+  // STILL NEEDS WORK
   // uses the state from the products array
   const cart = useState([products]);
 

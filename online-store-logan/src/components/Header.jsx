@@ -14,7 +14,9 @@ function Header({store_name, length}) {
             </div>
             <div className="cart-container"> 
                 <span className="cart-icon">🛒</span> 
-                {/* Cart count display here*/} 
+                <div className="cart-num">
+                    {length}
+                </div>
             </div>
         </div>
     );
