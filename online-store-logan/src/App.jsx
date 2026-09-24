@@ -38,10 +38,12 @@ function App() {
     //setAddCart([cart, (p => p.id == key)]);
     //setAddCart([cart, products.filter(p => p.id !== key)]);
     //setAddCart(cart.filter(p => p.id !== key));
-
+    const productToAdd = products.find(p => p.id == key);
     // I was overcomplicating this so much, but now I have it so it properly adds the items to the cart
-    setAddCart([...cart, (p => p.id == key)]);
-    //console.log(cart);
+    if (productToAdd) {
+      setAddCart([...cart, productToAdd]);
+    }
+    console.log(productToAdd);
   };
   
   return (

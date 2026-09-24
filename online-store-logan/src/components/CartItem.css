@@ -1,0 +1,12 @@
+.item-box {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+  margin-bottom: 16px;
+  padding: 16px;
+  width: 1050px;
+  text-align: left;
+  gap: 30px;
+  display: flex;
+  flex-direction: column;
+}

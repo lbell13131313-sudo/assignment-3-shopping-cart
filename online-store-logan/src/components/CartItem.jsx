@@ -10,8 +10,9 @@ function CartItem({name, price}) {
     }).format(price);
 
     return (
-        <div className="">
-            
+        <div className="item-box">
+            <div> {name} </div>
+            <div> {price} </div>
         </div>
     );
 }
