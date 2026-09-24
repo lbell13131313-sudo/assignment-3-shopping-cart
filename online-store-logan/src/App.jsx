@@ -59,7 +59,7 @@ function App() {
       <h3>Featured Products</h3>
 
       {/* allows the product cards to be in a row centered on the screen */}
-      <div className="product_row">
+      <div className="product-row">
         {/* supplies the props to the ProductCard function in ProductCard.jsx */}
         {/* much more condensed and reusable now than it was before */}
         {products.map(p => (
@@ -70,6 +70,18 @@ function App() {
             image={p.image}
             description={p.description}
             onAddToCart={addToCart}
+          />
+        )) }
+      </div>
+
+      <h3>Shopping Cart</h3>
+      
+      {/* shopping cart display */}
+      <div className="cart-display">
+        {cart.map(c => (
+          <CartItem
+            name={c.name}
+            price={c.price}
           />
         )) }
       </div>
