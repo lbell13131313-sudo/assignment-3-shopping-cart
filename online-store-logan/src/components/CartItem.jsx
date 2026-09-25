@@ -11,8 +11,10 @@ function CartItem({name, price}) {
 
     return (
         <div className="item-box">
-            <div> {name} </div>
-            <div> {price} </div>
+            <div>
+                <h3>{name}</h3>
+                <p>{formattedCurrency}</p>
+            </div>
         </div>
     );
 }

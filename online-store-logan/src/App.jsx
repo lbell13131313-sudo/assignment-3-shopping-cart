@@ -34,11 +34,11 @@ function App() {
 
   const [cart, setAddCart] = useState([]);
 
-  const addToCart = (key) => {
+  const addToCart = (identification) => {
     //setAddCart([cart, (p => p.id == key)]);
     //setAddCart([cart, products.filter(p => p.id !== key)]);
     //setAddCart(cart.filter(p => p.id !== key));
-    const productToAdd = products.find(p => p.id == key);
+    const productToAdd = products.find(p => p.id == identification);
     // I was overcomplicating this so much, but now I have it so it properly adds the items to the cart
     if (productToAdd) {
       setAddCart([...cart, productToAdd]);
@@ -66,7 +66,7 @@ function App() {
         {/* much more condensed and reusable now than it was before */}
         {products.map(p => (
           <ProductCard
-            key={p.id}
+            identification={p.id}
             name={p.name}
             price={p.price}
             image={p.image}
