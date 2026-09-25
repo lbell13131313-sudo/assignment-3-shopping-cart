@@ -11,9 +11,12 @@ function CartItem({name, price}) {
 
     return (
         <div className="item-box">
-            <div>
+            <div className="info">
                 <h3>{name}</h3>
                 <p>{formattedCurrency}</p>
+            </div>
+            <div className="delete-button">
+                Remove
             </div>
         </div>
     );

@@ -5,8 +5,25 @@
   margin-bottom: 16px;
   padding: 16px;
   width: 1050px;
-  text-align: left;
-  gap: 30px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.info {
   display: flex;
   flex-direction: column;
+  text-align: center;
+}
+
+.delete-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ff4757;
+  color: white;
+  font-size: 20px;
+  height: 60px;
+  width: 100px;
 }
