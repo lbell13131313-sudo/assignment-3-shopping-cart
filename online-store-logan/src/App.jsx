@@ -104,9 +104,9 @@ function App() {
               />
             ))}
             
-            <div className="total">
+            <h3 className="total">
               Total: {cartTotal()}
-            </div>
+            </h3>
           </>
         ) : (
           <div className="empty-cart">
