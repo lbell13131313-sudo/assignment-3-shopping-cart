@@ -6,6 +6,7 @@ import Footer from './components/Footer'
 import CartItem from './components/CartItem'
 import { useState } from 'react'
 
+
 // please note that my page is in dark mode
 function App() {
   const products = [
@@ -48,7 +49,7 @@ function App() {
   const deleteFromCart = (identification) => {
     setAddCart(cart.filter((_, index) => index !== identification));
   };
-  
+
   return (
     <div className="app">
       <Header
