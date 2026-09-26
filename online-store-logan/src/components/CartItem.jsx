@@ -1,7 +1,7 @@
 import './CartItem.css' // allows me to use my custom css styles
 
 // each card has the same format to help with a clean look
-function CartItem({name, price}) {
+function CartItem({identification, name, price, onDeleteFromCart}) {
     
     // formats the price to USD format including 2 decimal places and the $ in front
     const formattedCurrency = new Intl.NumberFormat('en-US', {
@@ -15,9 +15,9 @@ function CartItem({name, price}) {
                 <h3>{name}</h3>
                 <p>{formattedCurrency}</p>
             </div>
-            <div className="delete-button">
+            <button className="delete-button" onClick = {() => onDeleteFromCart(identification)}>
                 Remove
-            </div>
+            </button>
         </div>
     );
 }

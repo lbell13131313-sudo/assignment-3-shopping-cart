@@ -34,16 +34,19 @@ function App() {
 
   const [cart, setAddCart] = useState([]);
 
+  // allows the user to add items to a cart
   const addToCart = (identification) => {
-    //setAddCart([cart, (p => p.id == key)]);
-    //setAddCart([cart, products.filter(p => p.id !== key)]);
-    //setAddCart(cart.filter(p => p.id !== key));
     const productToAdd = products.find(p => p.id == identification);
     // I was overcomplicating this so much, but now I have it so it properly adds the items to the cart
     if (productToAdd) {
       setAddCart([...cart, productToAdd]);
     }
-    console.log(productToAdd);
+    //console.log(productToAdd);
+  };
+
+  // allows the user to remove items from the cart from the click of a button
+  const deleteFromCart = (identification) => {
+    setAddCart(cart.filter((_, index) => index !== identification));
   };
   
   return (
@@ -80,10 +83,12 @@ function App() {
       
       {/* shopping cart display */}
       <div className="cart-display">
-        {cart.map(c => (
+        {cart.map((c, index) => (
           <CartItem
+            identification={index}
             name={c.name}
             price={c.price}
+            onDeleteFromCart={deleteFromCart}
           />
         )) }
       </div>
