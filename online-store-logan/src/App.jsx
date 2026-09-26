@@ -50,6 +50,14 @@ function App() {
     setAddCart(cart.filter((_, index) => index !== identification));
   };
 
+  const cartTotal = () => {
+    const total = cart.reduce((sum, item) => sum + item.price, 0);
+    return new Intl.NumberFormat('en-US', {
+      style: 'currency',
+      currency: 'USD',
+    }).format(total);
+  };
+
   return (
     <div className="app">
       <Header
@@ -86,14 +94,20 @@ function App() {
       <div className="cart-display">
         {/* conditional rendering that displays a cart empty message when there are 0 items in the cart array */}
         {cart.length > 0 ? (
-          cart.map((c, index) => (
-            <CartItem
-              identification={index}
-              name={c.name}
-              price={c.price}
-              onDeleteFromCart={deleteFromCart}
-            />
-          ))
+          <>
+            {cart.map((c, index) => (
+              <CartItem
+                identification={index}
+                name={c.name}
+                price={c.price}
+                onDeleteFromCart={deleteFromCart}
+              />
+            ))}
+            
+            <div className="total">
+              Total: {cartTotal()}
+            </div>
+          </>
         ) : (
           <div className="empty-cart">
             Your cart is empty

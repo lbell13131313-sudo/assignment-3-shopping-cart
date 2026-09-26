@@ -17,6 +17,12 @@
   }
 }
 
+.total {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+
 .product-row {
   display: flex;
   flex-direction: row;
