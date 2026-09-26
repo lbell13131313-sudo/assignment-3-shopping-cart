@@ -50,6 +50,7 @@ function App() {
     setAddCart(cart.filter((_, index) => index !== identification));
   };
 
+  // updates the total price of the shopping cart
   const cartTotal = () => {
     const total = cart.reduce((sum, item) => sum + item.price, 0);
     return new Intl.NumberFormat('en-US', {
