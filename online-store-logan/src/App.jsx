@@ -83,14 +83,21 @@ function App() {
       
       {/* shopping cart display */}
       <div className="cart-display">
-        {cart.map((c, index) => (
-          <CartItem
-            identification={index}
-            name={c.name}
-            price={c.price}
-            onDeleteFromCart={deleteFromCart}
-          />
-        )) }
+        {/* conditional rendering that displays a cart empty message when there are 0 items in the cart array */}
+        {cart.length > 0 ? (
+          cart.map((c, index) => (
+            <CartItem
+              identification={index}
+              name={c.name}
+              price={c.price}
+              onDeleteFromCart={deleteFromCart}
+            />
+          ))
+        ) : (
+          <div className="empty-cart">
+            Your cart is empty
+          </div>
+        )}
       </div>
 
       <Footer

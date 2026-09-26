@@ -31,6 +31,19 @@
   align-items: center;
 }
 
+.empty-cart {
+  background: #d1d1d1;
+  color: #757575;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+  margin-bottom: 16px;
+  padding: 16px;
+  width: 1050px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .hero {
   position: relative;
 
