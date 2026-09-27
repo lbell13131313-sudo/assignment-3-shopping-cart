@@ -71,7 +71,7 @@ function App() {
 
       {/* I had to change the link because my page is only 1124px wide for some reason I have no idea why */}
       <Hero
-        image="https://placehold.co/1124x400/9767d6/ffffff?text=Shop+Tech+and+Tech+Related+Items"
+        image="src\assets\techProducts.png"
       />
 
       {/* location that the products link will send you to*/}
