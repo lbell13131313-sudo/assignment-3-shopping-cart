@@ -5,16 +5,17 @@ function Footer({store_name, email, phone, address}) {
     return (
         <div className="footer">
             <div className="store_info">
-                <div>{store_name}</div>
-                <div>{email}</div>
-                <div>{phone}</div>
-                <div>{address}</div>
+                <a>{store_name}</a>
+                <a>{email}</a>
+                <a>{phone}</a>
+                <a>{address}</a>
             </div>
             <div className="footer_buttons">
-                <div>About</div>
-                <div>Contact</div>
-                <div>Privacy Policy</div>
-                <div>Terms of Service</div>
+                {/* functionality for the about, privacy policy, and terms of service page links will be added later */}
+                <a>About</a>
+                <a href="#contact">Contact</a>
+                <a>Privacy Policy</a>
+                <a>Terms of Service</a>
             </div>
         </div>
     );

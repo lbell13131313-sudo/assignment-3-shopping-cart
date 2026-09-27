@@ -61,17 +61,21 @@ function App() {
 
   return (
     <div className="app">
-      <Header
-        store_name="Logan's Tech Shop"
-        length={cart.length}
-      />
+      {/* location that the home link will send you to*/}
+      <a id="home">
+        <Header
+          store_name="Logan's Tech Shop"
+          length={cart.length}
+        />
+      </a>
 
       {/* I had to change the link because my page is only 1124px wide for some reason I have no idea why */}
       <Hero
         image="https://placehold.co/1124x400/9767d6/ffffff?text=Shop+Tech+and+Tech+Related+Items"
       />
 
-      <h3>Featured Products</h3>
+      {/* location that the products link will send you to*/}
+      <h3 id="products">Featured Products</h3>
 
       {/* allows the product cards to be in a row centered on the screen */}
       <div className="product-row">
@@ -110,18 +114,21 @@ function App() {
             </h3>
           </>
         ) : (
-          <div className="empty-cart">
+          <a className="empty-cart">
             Your cart is empty
-          </div>
+          </a>
         )}
       </div>
-
-      <Footer
-        store_name="Logan's Tech Shop"
-        email="logantechshop@gmail.com"
-        phone="(123) 456-7890"
-        address="123 Main Street, Nowhereville, NJ 12345"
-      />
+      
+      {/* location that the contact link will send you to*/}
+      <a id="contact">
+        <Footer
+          store_name="Logan's Tech Shop"
+          email="logantechshop@gmail.com"
+          phone="(123) 456-7890"
+          address="123 Main Street, Nowhereville, NJ 12345"
+        />
+      </a>
     </div>
   )
 }

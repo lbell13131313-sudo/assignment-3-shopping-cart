@@ -11,10 +11,10 @@ function CartItem({identification, name, price, onDeleteFromCart}) {
 
     return (
         <div className="item-box">
-            <div className="info">
+            <a className="info">
                 <h3>{name}</h3>
                 <p>{formattedCurrency}</p>
-            </div>
+            </a>
             <button className="delete-button" onClick = {() => onDeleteFromCart(identification)}>
                 Remove
             </button>

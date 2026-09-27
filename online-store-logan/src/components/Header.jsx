@@ -7,16 +7,17 @@ function Header({store_name, length}) {
                 {store_name}
             </div>
             <div className="menu-buttons">
-                <div>Home</div>
-                <div>Products</div>
-                <div>About</div>
-                <div>Contact</div>
+                <a href="#home">Home</a>
+                <a href="#products">Products</a>
+                {/* functionality for the about page link will be added later */}
+                <a>About</a>
+                <a href="#contact">Contact</a>
             </div>
             <div className="cart-container"> 
                 <span className="cart-icon">🛒</span> 
-                <div className="cart-num">
+                <a className="cart-num">
                     {length}
-                </div>
+                </a>
             </div>
         </div>
     );

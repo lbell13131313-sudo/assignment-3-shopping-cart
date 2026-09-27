@@ -17,11 +17,11 @@ function ProductCard({identification, name, price, image, description, onAddToCa
                     alt="Product image" 
                     className="image"
                 />
-                <div className="product-info">
+                <a className="product-info">
                     <h3>{name}</h3>
                     <p>{description}</p>
                     <p className="price">{formattedCurrency}</p>
-                </div>
+                </a>
                 <button className="add-cart-button" onClick = {() => onAddToCart(identification)}> 
                     Add to Cart
                 </button>
