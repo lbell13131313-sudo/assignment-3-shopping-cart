@@ -30,6 +30,13 @@
   gap: 30px;
 }
 
+/* will change the products display to column if on mobile */
+@media (max-width: 768px) {
+  .product-row {
+    flex-direction: column;
+  }
+}
+
 .cart-display {
   display: flex;
   flex-direction: column;
@@ -44,7 +51,7 @@
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
   margin-bottom: 16px;
   padding: 16px;
-  width: 1050px;
+  width: 92%;
   display: flex;
   align-items: center;
   justify-content: center;
